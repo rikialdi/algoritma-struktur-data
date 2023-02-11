@@ -1,5 +1,8 @@
 package algoritma.pertemuan9_10;
 
+import java.util.Arrays;
+import java.util.Collections;
+
 public class InsertionSort1Menaik {
     // Method menampilkan data
     public static void showData(int tab[], int batas) {
@@ -15,39 +18,62 @@ public class InsertionSort1Menaik {
 
     // Bagian program utama
     public static void main(String[] args) {
-        // Deklarasi variabel utama dan sekaligus memberi nilai pada data
-        int i;
-        int j;
-        int sisip;
-        int[] data = {6,1,2,3,4,5}; // silahkan di ganti untuk valuenya sesuai kebutuhan
-        int batas;
+//        // Deklarasi variabel utama dan sekaligus memberi nilai pada data
+//        int i;
+//        int j;
+//        int sisip;
+//        int[] data = {6,1,2,3,4,5}; // silahkan di ganti untuk valuenya sesuai kebutuhan
+//        int batas;
+//
+//        // Memberi masukan ke dalam variabel batas
+//        batas = data.length;
+//
+//        // Menampilkan data yang belum terurut
+//        showData(data, batas);
+//
+//        // Proses pengurutan metode penyisipan
+//        for (i = 0; i < batas; i++) {
+//            // Mengisi nilai sisipan dengan data[i]
+//            sisip = data[i];
+//
+//            // Mengisi nlai indeks j
+//            j = i - 1;
+//
+//            // Pengurutan menaik diganti dengan (<), jika shoritng menurun (>)
+//            while ((j >= 0) && (sisip < data[j])) {
+//                // Proses pertukaran/pergeseran data
+//                data[j + 1] = data[j];
+//                j = j - 1;
+//            }
+//
+//            // Proses penyisipan data sisip
+//            data[j + 1] = sisip;
+//        }
+//
+//        // Menampilkan data yang sudah terurut
+//        showData(data, batas);
 
-        // Memberi masukan ke dalam variabel batas
-        batas = data.length;
+//        urutMenaik();
+        urutAbjadMenaik();
+    }
 
-        // Menampilkan data yang belum terurut
-        showData(data, batas);
-
-        // Proses pengurutan metode penyisipan
-        for (i = 0; i < batas; i++) {
-            // Mengisi nilai sisipan dengan data[i]
-            sisip = data[i];
-
-            // Mengisi nlai indeks j
-            j = i - 1;
-
-            // Pengurutan menaik diganti dengan (<), jika shoritng menurun (>)
-            while ((j >= 0) && (sisip < data[j])) {
-                // Proses pertukaran/pergeseran data
-                data[j + 1] = data[j];
-                j = j - 1;
-            }
-
-            // Proses penyisipan data sisip
-            data[j + 1] = sisip;
+    public static void urutMenaik(){
+        int[] data = {6,1,2,3,4,5};
+        Arrays.sort(data); // shoritng menaik
+        for(int i =0; i<data.length; i++){
+            System.out.println(data[i]);
         }
+    }
 
-        // Menampilkan data yang sudah terurut
-        showData(data, batas);
+    // abjab ?
+    public static void urutAbjadMenaik(){
+        String[] data = {"pisang", "apel","jeruk","durian","rambutan"};
+        Arrays.sort(data);
+        System.out.println("Data urut menaik ="+ Arrays.toString(data));
+
+
+        //menurun
+        Arrays.sort(data, Collections.reverseOrder());// descending: menurun
+        System.out.println("Data urut menurun ="+ Arrays.toString(data));
     }
 }

@@ -45,6 +45,7 @@ class SelectionShortMenaik {
         data[b] = temp;
     }
     public static void main(String[] args){
+        perulangan();
         int ukuran = 100;
         SelectionShortMenaik DeretAngka;
         DeretAngka = new SelectionShortMenaik(ukuran);
@@ -52,8 +53,9 @@ class SelectionShortMenaik {
         DeretAngka.tambah(16);
         DeretAngka.tambah(2);
         DeretAngka.tambah(9);
-//        DeretAngka.tambah(21);
-//        DeretAngka.tambah(40);
+        DeretAngka.tambah(21);
+        DeretAngka.tambah(40);
+        //  2 ,9,15,16,21,40 :
         System.out.print("Data awal : ");
         DeretAngka.cetak();
         System.out.println();
@@ -61,5 +63,13 @@ class SelectionShortMenaik {
         System.out.print("Data akhir : ");
         DeretAngka.cetak();
         System.out.println();
+    }
+
+    public static void perulangan (){
+//        for while do while
+        // 1 sd 15
+        for(int i=1; i<=15; i++ ){
+            System.out.println("cetak ="+i);
+        }
     }
 }
